@@ -141,6 +141,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<!-- 배포또는 컴파일 할때 어떤 동작을 하라고 알려주는곳 -->
 	<build>
 		<plugins>
 			<plugin>

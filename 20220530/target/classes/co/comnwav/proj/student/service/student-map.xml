@@ -10,7 +10,7 @@
 	<select id="studentSelect"
 		parameterType="co.comnwav.proj.student.vo.StudentVO"
 		resultType="co.comnwav.proj.student.vo.StudentVO">
-
+		
 		SELECT * FROM STUDENT
 		WHERE ID = #{id}
 		<if test="password != null">

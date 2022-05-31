@@ -19,7 +19,7 @@
                     <th width="150">아이디</th>
                     <td width="380">
                         <!-- id : js에서 사용, name : java 에서 사용 반드시 둘다 적어야된다 -->
-                        <input type="email" id="id" name="id" required="required">&nbsp;&nbsp;
+                        <input type="text" id="id" name="id" required="required">&nbsp;&nbsp;
                         <button type="button" id='btn' onclick="idCheck()">중복체크</button>
                         <input type="hidden" id="checkId" value="N">
                     </td>

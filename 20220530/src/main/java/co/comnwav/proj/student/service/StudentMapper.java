@@ -14,5 +14,4 @@ public interface StudentMapper {
 	int studentDelete(StudentVO vo); // 회원삭제
 	
 	boolean idCheck(String id); // 아이디 중복 체크
-	
 }

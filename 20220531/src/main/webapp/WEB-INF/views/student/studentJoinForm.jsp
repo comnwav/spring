@@ -12,7 +12,7 @@
 			<h1>회원가입</h1>
 		</div>
 	
-	   <form id="frm" action="studentJoin.do" onsubmit="return formCheck()" method="post">
+	   <form id="frm" action="studentJoin.do" onsubmit="formCheck()" method="post">
         <div>
             <table border="1">
                 <tr>
@@ -33,7 +33,7 @@
                 <tr>
                     <th width="150">패스워드확인</th>
                     <td width="250">
-                        <input type="password" id="password1" required="required">
+                        <input type="password" id="passwordCheck" required="required">
                     </td>
                 </tr>
                  <tr>
@@ -79,9 +79,8 @@
     function formCheck() {
     	if (frm.checkId.value == 'N') {
     		alert("아이디 중복체크를 좀 해줘 부탁이야 제발")
-    		return false;
     	}
-    	if(frm.password.value != frm.password1.value) {
+    	if(frm.password.value != frm.passwordCheck.value) {
     		alert("패스워드가 일치하지 아니하지 아니한가?");
     		frm.password.value = "";
     		frm.password1.value = "";

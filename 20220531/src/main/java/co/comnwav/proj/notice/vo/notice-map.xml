@@ -32,10 +32,11 @@
 
 	<insert id="noticeInsert"
 		parameterType="co.comnwav.proj.notice.vo.NoticeVO">
-		<selectKey resultType="int" keyProperty="noticeId" order="BEFORE">
-			SELECT
-			CASE WHEN MAX(NOTICE_ID) != NULL THEN MAX(NOTICE_ID) + 1
-			ELSE 1 END AS ID 
+		<selectKey resultType="int" keyProperty="noticeId"
+			order="BEFORE">
+			SELECT CASE WHEN MAX(notice_id) IS NOT NULL
+			THEN MAX(notice_id) + 1
+			ELSE 1 END AS ID
 			FROM NOTICE
 		</selectKey>
 		INSERT INTO NOTICE
@@ -64,6 +65,7 @@
 
 	<update id="noticeHitUpdate" parameterType="int">
 		UPDATE NOTICE
-		SET NOTICE_HIT = NOTICE_HIT + 1 WHERE NOTICE_ID = #{id}
+		SET
+		NOTICE_HIT = NOTICE_HIT + 1 WHERE NOTICE_ID = #{id}
 	</update>
 </mapper>

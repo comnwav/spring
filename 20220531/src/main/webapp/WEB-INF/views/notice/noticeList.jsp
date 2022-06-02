@@ -99,34 +99,39 @@ table tr:hover {
 		.then(res => {
 			tbody.innerHTML = '';
 
+			let ary = ['noticeId', 'noticeName', 'noticeTitle', 'noticeDate', 'noticeHit', 'noticeAttach'];
+
 			res.forEach(Element => {
-				let tr = document.createElement('tr');
+
+				console.log(Element);
+
+				// let tr = document.createElement('tr');
 				
-				let id = document.createElement('td');
-				id.innerHTML = Element.noticeId;
-				tr.appendChild(id);
+				// let id = document.createElement('td');
+				// id.innerHTML = Element.noticeId;
+				// tr.appendChild(id);
 
-				let name = document.createElement('td');
-				name.innerHTML = Element.noticeName;
-				tr.appendChild(name);
+				// let name = document.createElement('td');
+				// name.innerHTML = Element.noticeName;
+				// tr.appendChild(name);
 
-				let title = document.createElement('td');
-				title.innerHTML = Element.noticeTitle;
-				tr.appendChild(title);
+				// let title = document.createElement('td');
+				// title.innerHTML = Element.noticeTitle;
+				// tr.appendChild(title);
 
-				let date = document.createElement('td');
-				date.innerHTML = Element.noticeDate;
-				tr.appendChild(date);
+				// let date = document.createElement('td');
+				// date.innerHTML = Element.noticeDate;
+				// tr.appendChild(date);
 
-				let hit = document.createElement('td');
-				hit.innerHTML = Element.noticeHit;
-				tr.appendChild(hit);
+				// let hit = document.createElement('td');
+				// hit.innerHTML = Element.noticeHit;
+				// tr.appendChild(hit);
 
-				let dir = document.createElement('td');
-				dir.innerHTML = Element.noticeDir;
-				tr.appendChild(dir);
+				// let dir = document.createElement('td');
+				// dir.innerHTML = Element.noticeDir;
+				// tr.appendChild(dir);
 
-				tbody.appendChild(tr);
+				// tbody.appendChild(tr);
 			})
 		})
 	}

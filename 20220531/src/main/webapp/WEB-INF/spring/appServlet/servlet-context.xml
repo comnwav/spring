@@ -24,15 +24,17 @@
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
+		<beans:property name="order" value="2" />
 	</beans:bean>
 
 	<!-- file upload resolver -->
 	<beans:bean
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 		id="multipartResolver">
-		<beans:property name="defaultEncoding" value="utf-8"/>
-		<beans:property name="maxUploadSize" value="1073741824"/>
-		<beans:property name="maxInMemorySize" value="1073741824"/>
+		<beans:property name="defaultEncoding" value="utf-8" />
+		<beans:property name="maxUploadSize" value="1073741824" />
+		<beans:property name="maxInMemorySize"
+			value="1073741824" />
 	</beans:bean>
 
 	<context:component-scan

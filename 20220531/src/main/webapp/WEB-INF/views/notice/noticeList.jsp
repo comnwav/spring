@@ -6,6 +6,7 @@
 		<head>
 			<meta charset="UTF-8">
 			<title>Insert title here</title>
+			<script src="resources/jquery-3.6.0.min.js"></script>
 		</head>
 		<style>
 			table tr:hover {
@@ -76,43 +77,45 @@
 
 		<script>
 			let list = document.querySelector('tbody');
-			list.addEventListener('click', function (e) {
-				if (e.target.tagName === 'TD') {
+			list.addEventListener('click', function (data) {
+				console.log(data);
+				// if (e.target.tagName === 'TD') {
 					// console.log(e.target.parentNode.children[0].textContent);
 					// console.log(e.target);
 					// location.href = 'getContent.do?noticeId='+e.target.parentNode.children[0].textContent;
-					frmHidden.noticeId.value = e.target.parentNode.children[0].textContent;
-					frmHidden.method = "post"
-					frmHidden.action = "getContent.do"
-					frmHidden.submit();
-				}
+					// frmHidden.noticeId.value = e.target.parentNode.children[0].textContent;
+					// frmHidden.method = "post"
+					// frmHidden.action = "getContent.do"
+					// frmHidden.submit();
+				// }
 			})
+			
+			// using JS
+			// let tbody = document.getElementById('tbody')
+			// function searchList() {
+			// 	let data = new FormData(document.getElementById('frm'))
 
-			let tbody = document.getElementById('tbody')
-			function searchList() {
-				let data = new FormData(document.getElementById('frm'))
+			// 	fetch("ajaxSearchList.do", {
+			// 		method: "POST",
+			// 		body: data
+			// 	})
+			// 		.then(res => res.json())
+			// 		.then(res => {
+			// 			tbody.innerHTML = '';
 
-				fetch("ajaxSearchList.do", {
-					method: "POST",
-					body: data
-				})
-					.then(res => res.json())
-					.then(res => {
-						tbody.innerHTML = '';
+			// 			let ary = ['noticeId', 'noticeName', 'noticeTitle', 'noticeDate', 'noticeHit', 'noticeAttach'];
 
-						let ary = ['noticeId', 'noticeName', 'noticeTitle', 'noticeDate', 'noticeHit', 'noticeAttach'];
-
-						res.forEach(Element => {
-							let tr = document.createElement('tr');
-							ary.forEach(field => {
-								let td = document.createElement('td');
-								td.innerHTML = Element[field];
-								tr.appendChild(td);
-							})
-							tbody.appendChild(tr);
-						})
-					})
-			}
+			// 			res.forEach(Element => {
+			// 				let tr = document.createElement('tr');
+			// 				ary.forEach(field => {
+			// 					let td = document.createElement('td');
+			// 					td.innerHTML = Element[field];
+			// 					tr.appendChild(td);
+			// 				})
+			// 				tbody.appendChild(tr);
+			// 			})
+			// 		})
+			// }
 		</script>
 
 		</html>

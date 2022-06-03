@@ -11,17 +11,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomeController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("왔능가 {}.", locale);
 		return "home/home";
 	}
-	
+
 	@RequestMapping("/home.do")
 	public String home() {
 		return "home/home";
 	}
+
 }

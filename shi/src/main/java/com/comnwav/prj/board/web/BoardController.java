@@ -25,7 +25,6 @@ public class BoardController {
 		return "board/boardList";
 	}
 
-	//
 	@RequestMapping("/boardInsertForm.do")
 	public String boardInsertForm() {
 		return "board/boardInsertForm";
@@ -62,7 +61,7 @@ public class BoardController {
 		return "redirect:boardList.do";
 	}
 	
-	@PostMapping("/ajaxSearchList.do")
+	@PostMapping("/ajaxBoardList.do")
 	@ResponseBody
 	public List<BoardVO> ajaxSearchList(@RequestParam("state") int state, @RequestParam("key") String key) {
 		return boardDao.boardSelectList(state, key);

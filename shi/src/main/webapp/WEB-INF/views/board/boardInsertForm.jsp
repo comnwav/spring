@@ -28,10 +28,6 @@
                         <td colspan="3"><textarea name="boardContents" id="boardContents" cols="30" rows="10"
                                 style="width:400px"></textarea></td>
                     </tr>
-                    <tr>
-                        <th><label for="boardPassword">비밀번호</label></th>
-                        <td colspan="3"><input type="password" name="boardPassword" id="boardPassword"></td>
-                    </tr>
                 </table>
                 <input type="submit" value="입력">
                 <input type="reset" value="초기화">

@@ -31,7 +31,7 @@
 								<th width="50">조회수</th>
 							</tr>
 						</thead>
-						<tbody id="listBody" height="300">
+						<tbody id="listBody">
 							<c:if test="${not empty boards }">
 								<c:forEach items="${boards }" var="board">
 									<tr onclick="clickTr('${board.boardId}')">
